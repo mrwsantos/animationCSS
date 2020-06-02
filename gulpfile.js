@@ -7,7 +7,7 @@ var plumber = require('gulp-plumber');
 
 //SASS
 gulp.task('sass', function () {
-    return gulp.src('./src/scss/style.scss')
+    return gulp.src('./src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./src/dist/css'))
         .pipe(notify('SASS compiled!'))
@@ -26,7 +26,7 @@ gulp.task('sass', function () {
     
     //MINIFY JS
     gulp.task('js', function () {
-        gulp.src(['./src/js/main.js'])
+        gulp.src(['./src/js/*.js'])
         .pipe(minify())
         .pipe(notify('JS compiled!'))
         .pipe(plumber())
@@ -40,8 +40,8 @@ gulp.task('sass', function () {
     
     //WATCH
     gulp.task('watch', function () {
-        gulp.watch('./src/scss/style.scss', ['sass']);
-        gulp.watch('./src/dist/css/style.css', ['css']);
-        gulp.watch('./src/js/main.js', ['js']);
+        gulp.watch('./src/scss/*.scss', ['sass']);
+        gulp.watch('./src/dist/css/*.css', ['css']);
+        gulp.watch('./src/js/*.js', ['js']);
     });
     
