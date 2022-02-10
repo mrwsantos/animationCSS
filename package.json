@@ -24,7 +24,7 @@
     "gulp": "^3.9.1",
     "gulp-minify": "^3.1.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   },
   "dependencies": {
     "gulp-notify": "^3.2.0",
